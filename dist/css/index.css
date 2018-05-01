@@ -1,0 +1,26 @@
+#less {
+  color: red;
+}
+
+body {
+  background: #ff0;
+}
+
+div {
+  border: 5px solid green;
+  font-size: 20px;
+  background: url(../images/51c5583ca9a3e99eae06868afde226e0.png) repeat;
+}
+
+img {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#head {
+  height: 100px;
+}
+
+.head {
+  display: block;
+}
