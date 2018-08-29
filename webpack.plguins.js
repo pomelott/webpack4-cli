@@ -8,7 +8,7 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 // 清除目录等
 const cleanWebpackPlugin = require("clean-webpack-plugin");
 //4.x之前用以压缩
-const uglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin");
+// const uglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin");
 // 分离css
 const extractTextPlugin = require("extract-text-webpack-plugin");
 //静态资源输出
@@ -24,10 +24,11 @@ module.exports = [
 			to: './pulic'
 		}]),
 		// 分离css插件参数为提取出去的路径
-		new extractTextPlugin("css/index.css"),
+		// new extractTextPlugin("css/index.css"),
+		new extractTextPlugin('css/[name]-one.css'), //此处也可以根据splitChunkPlugin的chunk名字做对应
 		// 消除冗余的css代码
 		new purifyCssWebpack({
-			// glob为扫描模块，使用其同步方法
+			// glob为扫描模块，使用其同步方法（请谨慎使用异步方法）
 			paths: glob.sync(path.join(__dirname, "src/*.html"))
 		}),
 		// 全局暴露统一入口

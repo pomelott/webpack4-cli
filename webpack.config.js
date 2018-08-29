@@ -18,7 +18,7 @@ module.exports = {
 	plugins: pluginsConfig,
 	devServer: {
 		contentBase: path.resolve(__dirname, "dist"),
-		host: "localhost",
+		host: "localhost",  // win8 下自启浏览器可能是因为没设置为localhost
 		port: "8090",
 		open: true, // 开启浏览器
 		hot: true   // 开启热更新
@@ -28,12 +28,15 @@ module.exports = {
 		rules: rulesConfig
 	},
 	// 提取js，lib1名字可改
+	// splitChunkPlugin功能非常强大，想要纤细了解可以查看我的个人博客
+	// https://www.cnblogs.com/pomelott/p/9030208.html 
+	// 有疑问的可以留言
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
 				lib1: {
 					chunks: "initial",
-					name: "jquery",
+					name: "test",  // 此处的name为其他用于使用chunk名字的地方做服务
 					enforce: true
 				}
 			}

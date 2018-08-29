@@ -1,7 +1,7 @@
 {
-  "name": "webpackDemo",
+  "name": "webpackdemo",
   "version": "1.0.0",
-  "description": "",
+  "description": "基于webpack4.6.0的多页应用配置，包括常见的插件使用与配置。\r 要点都有注释！\r 如有帮助，请赐我一颗小星星。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -38,5 +38,13 @@
   },
   "dependencies": {
     "jquery": "^3.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pomelott/webpack4.x_Demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pomelott/webpack4.x_Demo/issues"
+  },
+  "homepage": "https://github.com/pomelott/webpack4.x_Demo#readme"
 }

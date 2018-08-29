@@ -109,7 +109,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b4c611c0a14d75258348"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e7539d3d9baad42870fe"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -829,7 +829,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/js/index2.js","jquery"]);
+/******/ 	deferredModules.push(["./src/js/index2.js","test"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
