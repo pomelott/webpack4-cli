@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode development",
-    "dev": "webpack-dev-server --inline --mode development"
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server --inline --mode=development"
   },
   "keywords": [],
   "author": "",
@@ -21,12 +21,17 @@
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "fs-extra": "^9.0.0",
     "glob": "^7.1.2",
+    "html-loader": "^1.1.0",
     "html-webpack-plugin": "^3.2.0",
     "html-withimg-loader": "^0.1.16",
     "less": "^3.0.2",
     "less-loader": "^4.1.0",
+    "pomelo-toolbox": "^1.0.32",
     "postcss-loader": "^2.1.4",
+    "pug": "^2.0.4",
+    "pug-html-loader": "^1.1.5",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "style-loader": "^0.21.0",

@@ -48,6 +48,10 @@ module.exports = [
 				use: ["html-withimg-loader"]
 			},
 			{
+				test: /\.pug$/,
+				use: ['html-loader', 'pug-html-loader']
+			},
+			{
 				test: /\.less$/,
 				// 三个loader的顺序不能变
 				// 不分离的写法

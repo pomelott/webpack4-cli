@@ -1,6 +1,6 @@
-import "./css/a.css"
-import "./less/test.less"
-// import "./sass/test.scss"
+// @import "./css/a.css"
+// @import "./less/test.less"
+import "./sass/test.scss"
 
 
 import {a, b, Person} from "./js/test.js"

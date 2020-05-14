@@ -4,6 +4,7 @@ import "../less/test.less"
 
 
 import {a, b, Person} from "./test.js"
+console.log('index.js')
 console.log(a);
 console.log(b);
 $("div").eq(0).css({
