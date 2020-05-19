@@ -1,8 +1,9 @@
-import "../css/a.css"
+
 import "../less/test.less"
 // import "./sass/test.scss"
-
-
+import $ from 'jquery';
+import Vue from 'vue';
+let app = new Vue()
 import {a, b, Person} from "./test.js"
 console.log('index.js')
 console.log(a);

@@ -6,21 +6,30 @@ const {pageDir, tplDir, rootDir, tplCompiledDir} = require('../../tools/path');
 const tplMaker = require('../../template/tplMaker');
 const {getPageModule} = require('../../tools/util');
 const tplPugDir = path.resolve(tplDir, 'tpl.pug');
-
+const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
+const ChunkManifestPlugin = require('webpack-chunk-manifest-plugin');
+// const HtmlRuntimePlugin = require("html-webpack-inline-runtime-plugin");
 const {logger} = require('../../tools/logger')
+const htmlInlineEntryChunkPlugin = require('html-inline-entry-chunk-plugin')
 let pages = getPageModule(pageDir);
-console.log(logger.log)
 // let pages = fse.readdirSync(pageDir);
 let output = [];
+
 logger.log(pages)
+logger.log('-=-=-=-=-=--=');
+
 for (let key in pages) {
 	let moduleItem = pages[key];
 	logger.log(moduleItem);
+	output.push(new htmlInlineEntryChunkPlugin())
+	
+	console.log('--------------html plugin-----------------------')
 	if (moduleItem.html) {
 		// 使用page.html 重置模板
 		output.push(
 			new htmlWebpackPlugin({
-				chunks: [moduleItem.name],
+				entry: moduleItem.name,
+				// chunks: [moduleItem.name],
 				filename: `${key}.html`,
 				title: moduleItem.name,
 				template: path.join(rootDir, key, moduleItem.html)
@@ -35,14 +44,23 @@ for (let key in pages) {
 		tplMaker(tplPugDir, pageParam, tplHtmlDir);
 		output.push(
 			new htmlWebpackPlugin({
-				chunks: [moduleItem.name],
+				entry: moduleItem.name,
+				// chunks: [moduleItem.name],
 				filename: `${key}.html`,
 				title: moduleItem.name,
 				template: tplHtmlDir
 			})
 		)
 	}
+	
+	// output.push(
+	// 	new InlineManifestWebpackPlugin()
+	// 	// new HtmlRuntimePlugin()
+	// )
+	
 }
+
+
 // pages.forEach((item) => {
 	
 	// tplMaker(tplPugDir, {title: 'TNT'}, tplHtmlDir);
