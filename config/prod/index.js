@@ -1,15 +1,11 @@
 const path = require('path');
 const pluginsConfig = require("../comm/plugin");
 const rulesConfig = require("../comm/rule");
-const resolveConfig = require('../comm/resolve')
+const resolveConfig = require('../comm/resolve');
+const entryConfig = require('../comm/entry')
 const {distDir, pageDir} = require('../tools/path')
 module.exports = {
-    entry: {
-		// 多入口文件
-		index: path.join(pageDir, 'index/entry.js'),
-		list: './src/js/list.js',
-		pageOne: './src/js/pageOne.js'
-	},
+    entry: entryConfig,
 	output: {
 		path: distDir,
 		// 打包多出口文件

@@ -1,5 +1,5 @@
 const fse = require('fs-extra');
-const {pageDir} = require('./path')
+const {pageDir, rootDir} = require('./path')
 const {logger} = require('./logger');
 const {join} = require('path')
 function getAllFile (dir) {
@@ -41,6 +41,10 @@ function getPageModule (dir) {
             pageModule[pageIdx].param = pageFile;
         } else if (pageFile === 'page.html') {
             pageModule[pageIdx].html = pageFile;
+        } else if (pageFile === 'entry.js') {
+            pageModule[pageIdx].entry = pageFile;
+        } else {
+            logger.error('page file error, There should be param.js、entry.js at least !')
         }
         
     })
@@ -48,8 +52,22 @@ function getPageModule (dir) {
 }
 
 
+function getEntryModule (pageModule) {
+    let temp = {};
+    for (let key in pageModule) {
+        let pageItem = pageModule[key];
+        if (!pageItem.entry) {
+            logger.error(`there should be a entry file in ${key}`)
+        } else {
+            temp[pageItem.name] = join(rootDir, key, 'entry.js')
+        }
+    }
+    return temp;
+}
+
 
 module.exports = {
     getAllFile,
-    getPageModule
+    getPageModule,
+    getEntryModule
 }

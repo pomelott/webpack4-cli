@@ -2,13 +2,9 @@ const path = require('path');
 const pluginsConfig = require("../comm/plugin");
 const rulesConfig = require("../comm/rule");
 const {distDir} = require('../tools/path');
+const entryConfig = require('../comm/entry')
 module.exports = {
-    entry: {
-		// 多入口文件
-		a: './src/js/index.js',
-		b: './src/js/index2.js',
-		jquery: 'jquery'
-	},
+    entry: entryConfig,
 	output: {
 		path: distDir,
 		// 打包多出口文件
