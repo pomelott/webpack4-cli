@@ -1,42 +1,37 @@
-const path = require('path');
-const pluginsConfig = require("../comm/plugin");
-const rulesConfig = require("../comm/rule");
-const {distDir} = require('../tools/path');
-const entryConfig = require('../comm/entry')
+const pluginsConfig = require("./plugin");
+const entryConfig = require('../comm/entry');
+const resolveConfig = require('../comm/resolve');
+const optimizationConfig = require('../comm/optimization');
+const moduleConfig = require('../comm/module');
+const outputConfig = require('./output');
+// const outputConfig = require('../comm/output')
+const contextConfig = require('../comm/context')
+const {devConf} = require('../static');
+const {distDir, distPageDir, distJsDir, distCssDir} = require('../tools/path');
+
+
 module.exports = {
     entry: entryConfig,
-	output: {
-		path: distDir,
-		// 打包多出口文件
-		// 生成 a.bundle.js  b.bundle.js  jquery.bundle.js
-		filename: 'js/[name].bundle.js'
-	},
+	output: outputConfig,
 	plugins: pluginsConfig,
+	resolve: resolveConfig,
+	module: moduleConfig,
+	optimization: optimizationConfig,
+	// context: contextConfig,
 	devServer: {
-        // publicPath: '/page',
-		contentBase: '../../dist',
-		host: "localhost",  // win8 下自启浏览器可能是因为没设置为localhost
-		port: "8090",
+		// publicPath: 'localhost:8090/js',
+		// disableHostCheck: true,
+		// contentBasePublicPath: '/dist',
+		contentBase: distDir,
+		// contentBase: [distPageDir, distJsDir, distCssDir],  // 此处需要使用绝对路径
+		host: devConf.host,  // win8 下自启浏览器可能是因为没设置为localhost
+		port: devConf.port,
 		open: true, // 开启浏览器
-		hot: true   // 开启热更新
+		// hotOnly: true,
+		openPage: 'page/example.html',
+		inline: true,
+		compress: true,
+		// watchContentBase: true,
 	},
-	// devtool: "source-map",  // 开启调试模式
-	module:{
-		rules: rulesConfig
-	},
-	// 提取js，lib1名字可改
-	// splitChunkPlugin功能非常强大，想要纤细了解可以查看我的个人博客
-	// https://www.cnblogs.com/pomelott/p/9030208.html 
-	// 有疑问的可以留言
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				lib1: {
-					chunks: "initial",
-					name: "test",  // 此处的name为其他用于使用chunk名字的地方做服务
-					enforce: true
-				}
-			}
-		}
-	}
+	devtool: "inline-source-map",  // 开启调试模式
 }

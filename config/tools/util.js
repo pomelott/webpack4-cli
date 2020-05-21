@@ -29,6 +29,7 @@ function getPageModule (dir) {
             pageIdx = pageArr[1],
             pageFile = pageArr[2],
             pageName = pageIdx.split('/').pop();
+            
             logger.log(pageArr);
         if (pageIdx === 'page') {
             logger.error(`page module error in ${pageArr[0]}`);
@@ -37,6 +38,7 @@ function getPageModule (dir) {
             pageModule[pageIdx] = {};
         }
         pageModule[pageIdx].name = pageName;
+        pageModule[pageIdx].entryDir = 'entry/' + pageIdx.match(/(?:^\w+\/)(.*)/)[1];
         if (pageFile === 'param.js') {
             pageModule[pageIdx].param = pageFile;
         } else if (pageFile === 'page.html') {
@@ -55,11 +57,14 @@ function getPageModule (dir) {
 function getEntryModule (pageModule) {
     let temp = {};
     for (let key in pageModule) {
+        console.log('ffffff u');
+        console.log(key.match(/(?:^\w+\/)(.*)/))
+        console.log(pageModule)
         let pageItem = pageModule[key];
         if (!pageItem.entry) {
             logger.error(`there should be a entry file in ${key}`)
         } else {
-            temp[pageItem.name] = join(rootDir, key, 'entry.js')
+            temp[pageItem.entryDir] = join(rootDir, key, 'entry.js')
         }
     }
     return temp;

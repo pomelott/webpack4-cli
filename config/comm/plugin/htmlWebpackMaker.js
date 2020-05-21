@@ -2,33 +2,55 @@
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const fse = require('fs-extra');
 const path = require('path')
-const {pageDir, tplDir, rootDir, tplCompiledDir} = require('../../tools/path');
+const {pageDir, tplDir, rootDir, tplCompiledDir, distJsDir, distDir} = require('../../tools/path');
 const tplMaker = require('../../template/tplMaker');
 const {getPageModule} = require('../../tools/util');
 const tplPugDir = path.resolve(tplDir, 'tpl.pug');
-const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
-const ChunkManifestPlugin = require('webpack-chunk-manifest-plugin');
-// const HtmlRuntimePlugin = require("html-webpack-inline-runtime-plugin");
+const config = require('../../static')
 const {logger} = require('../../tools/logger')
 const htmlInlineEntryChunkPlugin = require('html-inline-entry-chunk-plugin')
+
+const NODE_ENV  = process.env.NODE_ENV;
+const activeConfig = NODE_ENV === config.devConf.env ? 'devConf' : 'buildConf';
 let pages = getPageModule(pageDir);
 // let pages = fse.readdirSync(pageDir);
-let output = [];
 
+let output = [];
+console.log('--------------- page --------------');
+console.log(config)
+console.log(process.env.NODE_ENV)
 logger.log(pages)
-logger.log('-=-=-=-=-=--=');
 
 for (let key in pages) {
 	let moduleItem = pages[key];
+	console.log('-------------- pageiTEM ------------')
 	logger.log(moduleItem);
-	output.push(new htmlInlineEntryChunkPlugin())
+	console.log(key, moduleItem.entryDir)
+	console.log(path.join(distDir, key), path.join(distJsDir, moduleItem.entryDir))
+	console.log(path.relative(path.join(distDir, key).replace(/\/\w+$/, ''), distDir))
+	if (config[activeConfig].htmlAssetsAbsolutePath !== false) {
+		console.log('---------------------------------------1')
+		output.push(new htmlInlineEntryChunkPlugin({
+			baseJsDir: config[activeConfig].htmlAssetsAbsolutePath,
+			baseCssDir: config[activeConfig].htmlAssetsAbsolutePath
+		}))
+	} else {
+		console.log('---------------------------------------2')
+		output.push(new htmlInlineEntryChunkPlugin({
+			baseJsDir: path.relative(path.join(distDir, key).replace(/\/\w+$/, ''), distDir),
+			baseCssDir: path.relative(path.join(distDir, key).replace(/\/\w+$/, ''), distDir)
+		}))
+	}
+	
 	
 	console.log('--------------html plugin-----------------------')
+	console.log(key)
+	console.log(moduleItem)
 	if (moduleItem.html) {
 		// 使用page.html 重置模板
 		output.push(
 			new htmlWebpackPlugin({
-				entry: moduleItem.name,
+				entry: moduleItem.entryDir,
 				// chunks: [moduleItem.name],
 				filename: `${key}.html`,
 				title: moduleItem.name,
@@ -44,7 +66,7 @@ for (let key in pages) {
 		tplMaker(tplPugDir, pageParam, tplHtmlDir);
 		output.push(
 			new htmlWebpackPlugin({
-				entry: moduleItem.name,
+				entry: moduleItem.entryDir,
 				// chunks: [moduleItem.name],
 				filename: `${key}.html`,
 				title: moduleItem.name,
@@ -52,34 +74,12 @@ for (let key in pages) {
 			})
 		)
 	}
-	
-	// output.push(
-	// 	new InlineManifestWebpackPlugin()
-	// 	// new HtmlRuntimePlugin()
-	// )
+
 	
 }
 
 
-// pages.forEach((item) => {
-	
-	// tplMaker(tplPugDir, {title: 'TNT'}, tplHtmlDir);
-    // console.log(item)
-    // output.push(
-    //     new htmlWebpackPlugin({
-	// 		chunks: [item],
-	// 		filename: `page/dsadas/dsadas/${item}.html`,
-	// 		title: item,
-	// 		template: tplHtmlDir
-	// 		// templateContent: tplRender
-	// 		// template: path.resolve(__dirname, '../../template/tpl.pug'),
-	// 		// templateParameters: {title: 'fuckff'},
-	// 		// minify: {
-	// 		// 	collapseWhitespace: false
-	// 		// }
-	// 	})
-    // )
-// })
+
 
 
 module.exports = output;

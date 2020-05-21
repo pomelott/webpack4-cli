@@ -1,1 +1,1 @@
-console.log('example')
+console.log('example/index.js111');
