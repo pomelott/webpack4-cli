@@ -9,7 +9,8 @@ const fs =require('fs')
 // logger.logger(fn())
 // console.log(1111111111111)
 module.exports = function (tpl, data, targetPath) {
-    let tplData = pug.renderFile(tpl, data, {pretty: '\t'});
+    data.pretty = true;
+    let tplData = pug.renderFile(tpl, data);
     // fs.appendFileSync(targetPath, tplData);
     console.log(tplData)
     fs.writeFileSync(targetPath, tplData)
