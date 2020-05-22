@@ -24,7 +24,7 @@ module.exports = {
             let filename = entrypoint.name.split('/').pop();
             return `runtime/runtime-${filename}`
         }
-      },
-      moduleIds: "hashed",
+    },
+    //   moduleIds: "hashed",
     
 }

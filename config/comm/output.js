@@ -4,13 +4,6 @@ console.log('999999')
 console.log(getPageModule(pageDir))
 module.exports = {
     path: distDir,
-    filename: 'js/[name].js',
-    // chunkFilename: 'js/[name].bundle.js'
-    // filename: (pathData) => {
-    //     console.log('-------------');
-    //     console.log(pathData)
-    //     return 'js/[name]/[name].js'
-    // },
-    // publicPath: '../'
-    // publicPath: '/'
+    filename: 'js/[name].js?v=[hash]',
+    chunkFilename: 'js/[name].js?v=[chunkhash]'
 }

@@ -26,7 +26,7 @@ module.exports = [
 		// }]),
 		// 分离css插件参数为提取出去的路径
 		// new extractTextPlugin("css/index.css"),
-		new extractTextPlugin('css/[name].css'), //此处也可以根据splitChunkPlugin的chunk名字做对应
+		new extractTextPlugin('css/[name].css?v=[hash]'), //此处也可以根据splitChunkPlugin的chunk名字做对应
 		// 消除冗余的css代码
 		// new purifyCssWebpack({
 		// 	// glob为扫描模块，使用其同步方法（请谨慎使用异步方法）
@@ -37,6 +37,6 @@ module.exports = [
 			$: "jquery"
 		}),
 		...htmlWebpackMaker,
-		new cleanWebpackPlugin(['dist']),
+		// new cleanWebpackPlugin(['dist']),
 		// new webpack.HotModuleReplacementPlugin()
 ]
