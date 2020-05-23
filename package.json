@@ -28,6 +28,7 @@
     "fs-extra": "^9.0.0",
     "glob": "^7.1.2",
     "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
     "gulp-imagemin": "^7.1.0",
     "gulp-smushit": "^1.2.0",
     "gulp-tinypng-nokey": "^1.1.0",
