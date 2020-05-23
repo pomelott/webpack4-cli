@@ -28,7 +28,7 @@ module.exports = {
 		port: devConf.port,
 		open: true, // 开启浏览器
 		// hotOnly: true,
-		openPage: 'page/example.html',
+		openPage: 'page/index.html',
 		inline: true,
 		compress: true,
 		// watchContentBase: true,

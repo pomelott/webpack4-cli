@@ -4,8 +4,9 @@ module.exports= {
         '@': dirs.srcDir,
         'js': dirs.jsDir,
         'sass': dirs.sassDir,
-        'comp': dirs.componentsDir,
+        'components': dirs.componentsDir,
         'less': dirs.lessDir,
-        'assets': dirs.assetsDir
+        'assets': dirs.assetsDir,
+        'vue': 'vue/dist/vue.esm.js'
     }
 }

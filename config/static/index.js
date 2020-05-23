@@ -2,7 +2,7 @@ module.exports.devConf = {
     port: '8090',
     host: 'localhost',
     htmlAssetsAbsolutePath: false,
-    env: 'develpoment'
+    env: 'development'
 }
 
 module.exports.buildConf = {
