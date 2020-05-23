@@ -13,6 +13,7 @@ module.exports.distPageDir = path.resolve(this.distDir, 'page');
 module.exports.distJsDir = path.resolve(this.distDir, 'js');
 module.exports.distCssDir = path.resolve(this.distDir, 'css');
 module.exports.distAssetsDir = path.resolve(this.distDir, 'assets');
+module.exports.distImgDir = path.resolve(this.distDir, 'images');
 
 module.exports.confDir = path.resolve(this.rootDir, 'config');
 module.exports.tplDir = path.resolve(this.confDir, 'template');

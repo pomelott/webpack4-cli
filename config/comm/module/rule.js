@@ -21,10 +21,11 @@ const Rules = [
 				// 需要下载file-loader和url-loader
 				loader: "url-loader",
 				options: {
-					limit: 50,
+					name: '[name]-[hash].[ext]',
+					limit: 8192,
 					// 图片文件输出的文件夹
 					outputPath: "images"
-				}
+				},
 			}
 		]
 	},

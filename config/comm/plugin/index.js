@@ -17,8 +17,6 @@ const copyWebpackPlugin = require("copy-webpack-plugin");
 console.log('1231231232')
 console.log(assetsDir, distAssetsDir)
 module.exports = [
-		// new webpack.HotModuleReplacementPlugin(),
-		// 调用之前先清除
 		
 		// 4.x之前可用uglifyjs-webpack-plugin用以压缩文件，4.x可用--mode更改模式为production来压缩文件
 		// new uglifyjsWebpackPlugin(),
@@ -31,8 +29,6 @@ module.exports = [
 			]
 		}),
 		new VueLoaderPlugin(),
-		// 分离css插件参数为提取出去的路径
-		// new extractTextPlugin("css/index.css"),
 		
 		// 消除冗余的css代码
 		// new purifyCssWebpack({
@@ -45,6 +41,4 @@ module.exports = [
 		}),
 		...htmlPlugin,
 		...cssPlugin
-		// new cleanWebpackPlugin(['dist']),
-		// new webpack.HotModuleReplacementPlugin()
 ]

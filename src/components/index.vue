@@ -1,5 +1,8 @@
 <template>
   <div class="index-vue">
+      <img :src="bigImg" alt="">
+      <img :src="smallImg" alt="">
+      <img :src="exampleNode" alt="">
       <div v-for="(item, index) in list" class="list-item">
           <h2>{{item.name}}</h2>
           <h4>{{item.age}}</h4>
@@ -10,6 +13,13 @@
 export default {
     props: {
         list: Array
+    },
+    data () {
+        return {
+            bigImg: require('images/node.jpg'),
+            smallImg: require('images/edit.png'),
+            exampleNode: require('images/example/node.png')
+        }
     }
 }
 </script>

@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "node ./config/scpt/before",
     "build": "webpack --mode=production",
+    "postbuild": "node ./config/scpt/after && npx gulp minImg",
     "predev": "node ./config/scpt/before",
-    "dev": "webpack-dev-server --color --watch --hot --mode=development"
+    "dev": "webpack-dev-server --color --watch --hot --mode=development",
+    "postdev": "node ./config/scpt/after"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,10 @@
     "file-loader": "^1.1.11",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.2",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-smushit": "^1.2.0",
+    "gulp-tinypng-nokey": "^1.1.0",
     "html-inline-entry-chunk-plugin": "0.0.16",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
