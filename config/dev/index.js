@@ -7,8 +7,8 @@ const outputConfig = require('./output');
 // const outputConfig = require('../comm/output')
 const contextConfig = require('../comm/context')
 const {devConf} = require('../static');
-const {distDir, distPageDir, distJsDir, distCssDir} = require('../tools/path');
-
+const {rootDir, distDir, distPageDir, distJsDir, distCssDir} = require('../tools/path');
+const path = require('path')
 
 module.exports = {
     entry: entryConfig,
@@ -17,7 +17,9 @@ module.exports = {
 	resolve: resolveConfig,
 	module: moduleConfig,
 	optimization: optimizationConfig,
-	// context: contextConfig,
+	// context: process.cwd(),
+	// context: path.resolve(__dirname, '../../'),
+	context: rootDir,
 	devServer: {
 		// publicPath: 'localhost:8090/js',
 		// disableHostCheck: true,

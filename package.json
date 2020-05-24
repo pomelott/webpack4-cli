@@ -10,7 +10,8 @@
     "postbuild": "node ./config/scpt/after && npx gulp minImg",
     "predev": "node ./config/scpt/before",
     "dev": "webpack-dev-server --color --watch --hot --mode=development",
-    "postdev": "node ./config/scpt/after"
+    "postdev": "node ./config/scpt/after",
+    "minImg": "./node_modules/.bin/gulp minImg"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +25,7 @@
     "copy-webpack-plugin": "^6.0.1",
     "css-loader": "^3.5.3",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^1.1.11",
+    "file-loader": "^6.0.0",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.2",
     "gulp": "^4.0.2",
@@ -49,7 +50,7 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "url-loader": "^1.0.1",
+    "url-loader": "^4.1.0",
     "vue-loader": "^15.9.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0",
