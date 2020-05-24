@@ -9,5 +9,6 @@ module.exports= {
         'assets': dirs.assetsDir,
         'images': dirs.imgDir,
         'vue': 'vue/dist/vue.esm.js'
-    }
+    },
+    extensions: ['.ts', '.js', '.vue']
 }

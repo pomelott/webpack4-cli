@@ -21,6 +21,9 @@ module.exports = {
 	// context: path.resolve(__dirname, '../../'),
 	context: rootDir,
 	devServer: {
+		headers: {
+			uname: 'tate'
+		},
 		// publicPath: 'localhost:8090/js',
 		// disableHostCheck: true,
 		// contentBasePublicPath: '/dist',
