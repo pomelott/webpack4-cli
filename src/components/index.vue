@@ -1,9 +1,10 @@
 <template>
   <div class="index-vue">
+      <img src="https://webpack.js.org/e0b5805d423a4ec9473ee315250968b2.svg" alt="">
       <div  class="test-bg-img" :style="{'background-image': 'url('+ kobe +')'}">
             test bg img
       </div>
-      <!-- <img :src="kobe" alt=""> -->
+      <img :src="svgImg" alt="">
       <img :src="bigImg" alt="">
       <img :src="smallImg" alt="">
       <img :src="jpegImg" alt="">
@@ -25,7 +26,8 @@ export default {
             smallImg: require('images/edit.png'),
             jpegImg: require('images/example/ff/ff.jpeg'),
             kobe: require('images/example/ff/kobe.jpg'),
-            exampleNode: require('images/example/node.png')
+            exampleNode: require('images/example/node.png'),
+            svgImg: require('images/webpack.svg')
         }
     }
 }

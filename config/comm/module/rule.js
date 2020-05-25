@@ -29,7 +29,7 @@ const Rules = [
 		// }
 	},
 	{
-		test: /\.(png|jpe?g|gif)$/i,
+		test: /\.(png|jpe?g|gif|svg)$/i,
 		use: [{
 				// 需要下载file-loader和url-loader
 				loader: "url-loader",
