@@ -1,9 +1,9 @@
 
-import "../less/test.less"
+import "../less/test.less";
 import indexVue from 'components/index.vue'; 
 import $ from 'jquery';
 import Vue from 'vue';
-let app = new Vue({
+new Vue({
 	el: "#app",
 	data: {
 		
@@ -30,14 +30,14 @@ let app = new Vue({
 	components: {
 		indexVue
 	}
-})
-import {a, b, Person} from "./test.js"
-console.log('index.js')
+});
+import {a, b, Person} from "./test.js";
+console.log('index.js');
 console.log(a);
 console.log(b);
-console.log('wocaonide')
+console.log('wocaonide');
 $("div").eq(0).css({
-	width:"800px",
+	width: "800px",
 	height: "800px",
 	background: "#ccc"
 });

@@ -1,7 +1,7 @@
 <template>
   <div class="index-vue">
       <img src="https://webpack.js.org/e0b5805d423a4ec9473ee315250968b2.svg" alt="">
-      <div  class="test-bg-img" :style="{'background-image': 'url('+ kobe +')'}">
+      <div class="test-bg-img" :style="{'background-image': 'url('+ kobe +')'}">
             test bg img
       </div>
       <img :src="svgImg" alt="">
@@ -14,6 +14,7 @@
           <h4>{{item.age}}</h4>
       </div>
   </div>
+  
 </template>
 <script>
 export default {

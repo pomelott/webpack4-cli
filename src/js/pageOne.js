@@ -1,1 +1,1 @@
-console.log('page one')
+console.log('page one');

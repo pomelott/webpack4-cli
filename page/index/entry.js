@@ -1,2 +1,2 @@
 import 'js/index';
-import 'sass/index.scss'
+import 'sass/index.scss';

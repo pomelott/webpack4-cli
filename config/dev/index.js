@@ -21,22 +21,18 @@ module.exports = {
 	// context: path.resolve(__dirname, '../../'),
 	context: rootDir,
 	devServer: {
-		headers: {
-			uname: 'tate'
-		},
-		// publicPath: 'localhost:8090/js',
-		// disableHostCheck: true,
-		// contentBasePublicPath: '/dist',
 		contentBase: distDir,
-		// contentBase: [distPageDir, distJsDir, distCssDir],  // 此处需要使用绝对路径
 		host: devConf.host,  // win8 下自启浏览器可能是因为没设置为localhost
 		port: devConf.port,
 		open: true, // 开启浏览器
 		// hotOnly: true,
+		// overlay: {
+			// warnings: true,
+			// errors: true
+		// },
 		openPage: 'page/index.html',
 		inline: true,
 		compress: true,
-		// watchContentBase: true,
 	},
 	devtool: "inline-source-map",  // 开启调试模式
 }

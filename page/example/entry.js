@@ -1,3 +1,3 @@
 import 'js/example/index.js';
 import 'sass/example.scss';
-console.log('entry.js')
+console.log('entry.js');

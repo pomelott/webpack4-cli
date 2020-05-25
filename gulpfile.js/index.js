@@ -14,7 +14,7 @@ task('minImg', function () {
     return src('dist/images/**/*.*')
         // 脚本压缩 gifsicle 等插件很容易下载失败，需要确保插件下载成功 国内最好用cnpm
         .pipe(
-            // cache(
+            cache(
                 imagemin([
                     imagemin.gifsicle({interlaced: true}),
                     imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -28,7 +28,7 @@ task('minImg', function () {
                 ], {
                     verbose: true
                 })
-            // )
+            )
         )
         // 在线压缩，压缩率较高但需要翻墙且图片格式有限制
         // .pipe(

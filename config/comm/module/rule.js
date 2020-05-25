@@ -7,12 +7,21 @@ const Rules = [
 	
 	{
 		test: /\.vue$/, 
-		loader: 'vue-loader',
-		exclude: /node_modules/  
+		use: ['vue-loader'],
+		// exclude: "/node_modules/"  
 	},
 	{
 		test: /\.js$/,
-		use: ["babel-loader"],
+		use: [
+			"babel-loader",
+			{
+				loader: 'eslint-loader',
+				options: {
+					fix: true,
+					enforce: "pre"
+				}
+			}
+		],
 		// 不检查node_modules下的js文件
 		exclude: "/node_modules/",
 		// 此处指允许使用 ES6与commonJS的模块化规范
