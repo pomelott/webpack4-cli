@@ -64,7 +64,7 @@ function getEntryModule (pageModule) {
         if (!pageItem.entry) {
             logger.error(`there should be a entry file in ${key}`)
         } else {
-            temp[pageItem.entryDir] = join(rootDir, key, 'entry.js')
+            temp[pageItem.entryDir] = ["@babel/polyfill", join(rootDir, key, 'entry.js')]
         }
     }
     return temp;

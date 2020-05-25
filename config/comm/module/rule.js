@@ -12,7 +12,7 @@ const Rules = [
 	},
 	{
 		test: /\.js$/,
-		use: ["babel-loader?cacheDirectory"],
+		use: ["babel-loader"],
 		// 不检查node_modules下的js文件
 		exclude: "/node_modules/",
 		// 此处指允许使用 ES6与commonJS的模块化规范
