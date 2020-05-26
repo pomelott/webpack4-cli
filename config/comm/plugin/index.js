@@ -11,13 +11,13 @@ const cleanWebpackPlugin = require("clean-webpack-plugin");
 //4.x之前用以压缩
 // const uglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 //静态资源输出
 const copyWebpackPlugin = require("copy-webpack-plugin");
 console.log('1231231232')
 console.log(assetsDir, distAssetsDir)
 module.exports = [
-		
+	new BundleAnalyzerPlugin(),
 		// 4.x之前可用uglifyjs-webpack-plugin用以压缩文件，4.x可用--mode更改模式为production来压缩文件
 		// new uglifyjsWebpackPlugin(),
 		new copyWebpackPlugin({
