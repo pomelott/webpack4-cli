@@ -30,7 +30,7 @@ module.exports = {
 			// warnings: true,
 			// errors: true
 		// },
-		openPage: 'page/index.html',
+		openPage: 'page/example.html',
 		inline: true,
 		compress: true,
 	},

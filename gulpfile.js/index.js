@@ -10,7 +10,7 @@ const tinypng_nokey = require('gulp-tinypng-nokey');
 // 通过使用缓存提高压缩速度
 const cache = require('gulp-cache');
 // 压缩实在webpack build执行完之后进行的，即便压缩失败也不会影响webpack打包
-task('minImg', function () {
+task('minifyImg', function () {
     return src('dist/images/**/*.*')
         // 脚本压缩 gifsicle 等插件很容易下载失败，需要确保插件下载成功 国内最好用cnpm
         .pipe(
@@ -48,4 +48,4 @@ task('minImg', function () {
 
 })
 
-task('minImg')
+task('minifyImg')

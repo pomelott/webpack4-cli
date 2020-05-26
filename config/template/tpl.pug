@@ -1,10 +1,32 @@
+mixin addTag (tagName, dataArray)
+  - const selfTag = ['meta', 'link'];
+  each item in dataArray
+        - var temp = {};
+          each val,key in item
+            - temp[key] = val;
+        if selfTag.indexOf(tagName) !== -1
+          #{tagName}&attributes(temp)/
+        else 
+          #{tagName}&attributes(temp)
+
 doctype html
 html(lang="en")
   head
-    title=title
-    
+    title= title
+    +addTag('meta', tag.meta)
+    +addTag('link', tag.headLink)
+    +addTag('script', tag.headScript)
   body
-    h1 Pug - node template engine
-    #container.col
-      p=webpackManifest
-      p: span Pug is a terse and simple templating language with a strong focus on performance and powerful features.
+    if vueInit.el
+      - var selector = vueInit.el.match(/(?<=\.|#)(\w+)/)[0]
+      if vueInit.el[0] === '#'
+        div(id=selector)
+          if vueInit.entrance
+            div(is=vueInit.entrance)
+      else if vueInit.el[0] === '.'
+        div(class=selector)
+          if vueInit.entrance
+            div(is=vueInit.entrance)
+      
+    +addTag('link', tag.bodyLink)
+    +addTag('script', tag.bodyScript)

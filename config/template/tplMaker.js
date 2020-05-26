@@ -1,17 +1,31 @@
 const pug = require('pug');
 const fs =require('fs')
-// const fn = pug.compileFile(path.resolve(__dirname, './tpl.pug'));
-// const tpl = pug.renderFile(path.resolve(__dirname, './tpl.pug'), {
-//     title: 'fdsfsd'
-// })
-// const logger = require('../tools/logger')
-// logger.log('12312321312')
-// logger.logger(fn())
-// console.log(1111111111111)
+let _ = require('lodash');
+const defaultParam = {
+    title: "multiPage-cli",
+    tag: {
+        meta: [{
+            name: 'webpack-multiPage-cli',
+            content: 'https://github.com/pomelott/webpack4.x_Demo'
+        }],
+        headLink: [],
+        headScript: [],
+        bodyLink: [],
+        bodyScript: []
+    },
+    vueInit: {}
+}
 module.exports = function (tpl, data, targetPath) {
-    data.pretty = true;
-    let tplData = pug.renderFile(tpl, data);
-    // fs.appendFileSync(targetPath, tplData);
+    
+    let copy = _.cloneDeep(defaultParam);
+    // data.pretty = true;
+    let fn = pug.compileFile(tpl, {pretty: true}), tplData;
+    data = _.merge(copy, data);
+    console.log('----------- data -----------')
+    console.log(data)
+    tplData = fn(data);
+    // let tplData = pug.renderFile(tpl, data);
+    console.log('------- tpl data --------')
     console.log(tplData)
     fs.writeFileSync(targetPath, tplData)
     return true;

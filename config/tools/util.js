@@ -30,7 +30,7 @@ function getPageModule (dir) {
             pageFile = pageArr[2],
             pageName = pageIdx.split('/').pop();
             
-            logger.log(pageArr);
+            // logger.log(pageArr);
         if (pageIdx === 'page') {
             logger.error(`page module error in ${pageArr[0]}`);
         }
@@ -57,9 +57,6 @@ function getPageModule (dir) {
 function getEntryModule (pageModule) {
     let temp = {};
     for (let key in pageModule) {
-        console.log('ffffff u');
-        console.log(key.match(/(?:^\w+\/)(.*)/))
-        console.log(pageModule)
         let pageItem = pageModule[key];
         if (!pageItem.entry) {
             logger.error(`there should be a entry file in ${key}`)
