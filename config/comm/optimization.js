@@ -1,8 +1,5 @@
 module.exports = {
     splitChunks: {
-        // minChunks: 1,
-        // minSize: 1,
-        // chunks: 'all',
         cacheGroups: {
             lib1: {
                 chunks: "async",
@@ -24,7 +21,6 @@ module.exports = {
             let filename = entrypoint.name.split('/').pop();
             return `runtime/runtime-${filename}`
         }
-    },
-    //   moduleIds: "hashed",
+    }
     
 }

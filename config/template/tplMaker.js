@@ -16,17 +16,10 @@ const defaultParam = {
     vueInit: {}
 }
 module.exports = function (tpl, data, targetPath) {
-    
     let copy = _.cloneDeep(defaultParam);
-    // data.pretty = true;
     let fn = pug.compileFile(tpl, {pretty: true}), tplData;
     data = _.merge(copy, data);
-    console.log('----------- data -----------')
-    console.log(data)
     tplData = fn(data);
-    // let tplData = pug.renderFile(tpl, data);
-    console.log('------- tpl data --------')
-    console.log(tplData)
     fs.writeFileSync(targetPath, tplData)
     return true;
 }

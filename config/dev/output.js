@@ -5,5 +5,4 @@ const devOutput = {
     hotUpdateChunkFilename: 'js/hot-update-[name].js',
     hotUpdateMainFilename: `hot-update.json`
 }
-console.log(Object.assign(commOutputConfig, devOutput))
 module.exports = Object.assign(commOutputConfig, devOutput)

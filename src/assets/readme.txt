@@ -1,4 +1,3 @@
-UI
-cmd UI
+liscense
 rename
 readme

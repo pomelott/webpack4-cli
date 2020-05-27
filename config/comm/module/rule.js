@@ -1,10 +1,8 @@
 
 const styleRules = require('./styleRules');
 const {imgDir} = require('../../tools/path')
-console.log('---------- styleRules ------------');
-console.log(styleRules)
+
 const Rules = [
-	
 	{
 		test: /\.vue$/, 
 		use: ['vue-loader'],
@@ -51,14 +49,8 @@ const Rules = [
 					// 通过 require(url) 加载图片
 					esModule: false,
 					outputPath: (url, resourcePath, context) => {
-						console.log('------ fuck  1 ----');
-						console.log(url);
-						console.log(resourcePath);
-						// console.log(context);
 						let targetPath = resourcePath.match(/(?<=.*?images\/)(.*?\/)(?=\w+\.\w+)/g);
 						targetPath = targetPath ? targetPath[0] : '';
-						console.log('------ fuck  2 ----');
-						console.log(targetPath)
 						return `images/${targetPath}${url}`
 					  },
 				},

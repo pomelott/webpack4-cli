@@ -1,7 +1,6 @@
 const extractTextPlugin = require("extract-text-webpack-plugin");
 const env = process.env.NODE_ENV;
-console.log('--------- env ----------');
-console.log(env)
+
 const ruleMap = {
     css: {
         development: ['vue-style-loader','style-loader', 'css-loader', 'postcss-loader'],

@@ -56,7 +56,6 @@
     "pug-html-loader": "^1.1.5",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
-    "rmraf": "^1.0.3",
     "sass-loader": "^8.0.2",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",

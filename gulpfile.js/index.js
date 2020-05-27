@@ -5,10 +5,12 @@ const {
     task
 } = require('gulp');
 const imagemin = require('gulp-imagemin');
+const {logger} = require('../config/tools/logger')
 const smushit = require('gulp-smushit');
 const tinypng_nokey = require('gulp-tinypng-nokey');
 // 通过使用缓存提高压缩速度
 const cache = require('gulp-cache');
+logger.info('gulp: starting minify images...')
 // 压缩实在webpack build执行完之后进行的，即便压缩失败也不会影响webpack打包
 task('minifyImg', function () {
     return src('dist/images/**/*.*')
@@ -45,6 +47,7 @@ task('minifyImg', function () {
             // )
         // )
         .pipe(dest('dist/images'))
+        
 
 })
 

@@ -1,6 +1,8 @@
 
-const {Plog} = require('pomelo-toolbox').print
+const {Plog, LogLoading} = require('pomelo-toolbox').print
 
 module.exports.logger = new Plog({
-    prefix: 'webpack@4-multPage-cli'
+    prefix: 'webpack-multiPage-cli'
 });
+
+module.exports.LogLoading = LogLoading
