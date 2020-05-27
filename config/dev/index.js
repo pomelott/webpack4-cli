@@ -21,6 +21,7 @@ module.exports = {
 	// context: path.resolve(__dirname, '../../'),
 	context: rootDir,
 	devServer: {
+		disableHostCheck: true,
 		contentBase: distDir,
 		host: devConf.host,  // win8 下自启浏览器可能是因为没设置为localhost
 		port: devConf.port,
@@ -30,7 +31,7 @@ module.exports = {
 			// warnings: true,
 			// errors: true
 		// },
-		openPage: 'page/example.html',
+		openPage: 'page/index.html',
 		inline: true,
 		compress: true,
 	},

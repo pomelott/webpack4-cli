@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>wo cao le </title>
-    <link rel="stylesheet" href="">
+    <meta name="webpack-multipage-cli" content="https://github.com/pomelott/webpack4.x_Demo">
+    <title>webpack-multiPage-cli</title>
+    <link rel="shortcut icon" href="https://www.webpackjs.com/assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.min.css">
 </head>
 <body>
-    <h1>fuck you</h1>
-    <div>init content</div>
-    <div id="app">
-        dasdas 222333
-        <index-vue :list="list"></index-vue>
+    <div id="app" class="cli tc">
+        <!-- <img class="mt50" :src="img.webpack" :class="[animateClass]" width="200" height="200" alt=""> -->
+        <logo class="mt50" :img="img.webpack" :attr="{width: 200, height: 200}"></logo>
+        <h2 class="cli-title mt20 mb10">Webpack-MultiPage-Cli</h2>
+        <img src="https://img.shields.io/badge/webpack-4.0.0+-green" alt="webpack-version">
+        <img src="https://img.shields.io/badge/node-v10.8.0-green" alt="node-version">
+        <img src="https://img.shields.io/badge/npm-v6.2.0-green" alt="npm-version">
+        <div class="cli-link mt40">
+            <a href="https://github.com/pomelott/webpack4.x_Demo">Document</a>
+            <a href="//localhost:8090/page/example/vueDemo.html">VueDemo</a>
+            <a href="//localhost:8888">Analyze</a>
+            <a href="https://github.com/pomelott">Contact</a>
+        </div>
+        <p class="cli-notice mt10"> If this cli helped you, please give me a <a href="https://github.com/pomelott/webpack4.x_Demo" style="color: #00e600;">star</a> on this github !</p>
+        <div class="cli-plugin mt50">
+            <h3 class="cli-plugin-title mb10">Author's related dependencies</h3>
+            <ol class="plugin-list">
+                <li>
+                    <a href="https://github.com/pomelott/html-inline-entry-chunk-plugin">html-inline-entry-chunk-plugin:</a>
+                    <p class="cli-plugin-des">inline the js/css chunks according to the entry in runtime</p>
+                </li>
+                <li>
+                    <a href="https://github.com/pomelott/package-copy">package-copy:</a>
+                    <p class="cli-plugin-des">custom package.json file</p>
+                </li>
+            </ol>
+        </div>
     </div>
-    <script src="https://cdn.bootcdn.net/ajax/libs/react/16.13.1/cjs/react.development.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     "build": "webpack --mode=production",
     "postbuild": "node ./config/scpt/after && npx gulp minifyImg",
     "predev": "node ./config/scpt/before",
-    "dev": "webpack-dev-server --color --watch --hot --mode=development",
+    "dev": "webpack-dev-server --color --progress --bail --watch --hot --mode=development",
     "postdev": "node ./config/scpt/after",
     "minImg": "./node_modules/.bin/gulp minImg",
     "analyze": "npx webpack --profile --json > stats.json && npx webpack-bundle-analyzer stats.json"

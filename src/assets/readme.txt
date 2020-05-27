@@ -1,4 +1,4 @@
-analyzer
 UI
+cmd UI
 rename
 readme

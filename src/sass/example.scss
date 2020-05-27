@@ -1,1 +1,15 @@
-@import "./base.scss";
+@import "./base/base.scss";
+@import "./base/common.scss";
+#app{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
+#app *{
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: underline;
+}

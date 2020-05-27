@@ -36,7 +36,7 @@ module.exports = {
         "no-unexpected-multiline": 2, //行尾缺少分号可能导致一些意外情况
         "no-sparse-arrays": 2, //数组中多出逗号
         "no-shadow-restricted-names": 2, //关键词与命名冲突
-        "no-undef": 2, //变量未定义        
+        "no-undef": 0, //变量未定义        
         "no-native-reassign": 2, //禁止覆盖原生对象
         "block-scoped-var": 2, //变量定义后未使用
         // code style

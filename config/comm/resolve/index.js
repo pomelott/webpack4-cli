@@ -10,5 +10,6 @@ module.exports= {
         'images': dirs.imgDir,
         'vue': 'vue/dist/vue.esm.js'
     },
-    extensions: ['.ts', '.js', '.vue']
+    extensions: ['.ts', '.js', '.vue'],
+    mainFiles: ["index"]
 }
