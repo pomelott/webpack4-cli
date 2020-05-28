@@ -73,6 +73,30 @@ if there is a param.js, cli will resolve this with the default html template wri
         }
     }
 ```
+```html
+    <!doctype html>
+    <html lang="en">
+
+    <head>
+        <title>Example in Multi-Page</title>
+        <meta name="webpack-multi-page-cli" content="vueDemo" />
+        <meta name="webpack-multi-page-cli" content="https://github.com/pomelott/webpack4.x_Demo" />
+        <link rel="icon" type="image/png" href="https://vuejs.bootcss.com/images/logo.png" />
+        <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="http://www.cdn-plugin.com/assets/css/entry/example/vueDemo.css?v=2466d76ff005024cce26">
+    </head>
+
+    <body>
+        <div id="app">
+            <div is="example"></div>
+        </div>
+        <script src="http://www.cdn-plugin.com/assets/js/runtime/runtime-vueDemo.js?v=2466d76ff005024cce26"></script>
+        <script src="http://www.cdn-plugin.com/assets/js/common/vendors.js?v=5b4f3badf8d6ddb0036f"></script>
+        <script src="http://www.cdn-plugin.com/assets/js/entry/example/vueDemo.js?v=8df1c19f97ce1a9abf72"></script>
+    </body>
+
+    </html>
+```
 2. use page.html and entry.js
 you can write the html code you need to custom html file, and entry.js is the crrespond entrance file of assets.
 
