@@ -104,7 +104,7 @@ you can write the html code you need to custom html file, and entry.js is the cr
 ### custom env in cli-config.js in rootDir,detail as follows:
   | Name | Type | Default | Description |
   |:---:|:---:|:---:|:---:|
-  | dev.port | String | '8090' | devServer server (This is the post-80s and post-90s era) |
+  | dev.port | String | '8090' | devServer port (This is the post-80s and post-90s era) |
   | dev.host | String | 'localhost' | devServer host |
   | dev.htmlAssetsAbsolutePath | Boolean\|String | false | control baseDir of html-inlined-assets in dev mode, false will use relative path |
   | build.htmlAssetsAbsolutePath | Boolean\|String | false | control baseDir of html-inlined-assets in build mode |
