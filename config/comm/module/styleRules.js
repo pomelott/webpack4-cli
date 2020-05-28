@@ -12,17 +12,17 @@ const ruleMap = {
         })
     },
     sass: {
-        development: ['style-loader', 'css-loader', 'sass-loader'],
+        development: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
         production: extractTextPlugin.extract({
             	fallback:"style-loader",
-            	use: ["css-loader", "sass-loader"]
+            	use: ["css-loader", 'postcss-loader', "sass-loader"]
         })
     },
     less: {
-        development: ['style-loader', 'css-loader', 'less-loader'],
+        development: ['style-loader', 'css-loader', 'postcss-loader','less-loader'],
         production: extractTextPlugin.extract({
             	fallback:"style-loader",
-            	use: ["css-loader", "less-loader"]
+            	use: ["css-loader", 'postcss-loader', "less-loader"]
         })
     }
 }
