@@ -1,3 +1,2 @@
-liscense
-rename
 readme
+rename

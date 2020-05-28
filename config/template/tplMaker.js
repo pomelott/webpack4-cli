@@ -2,12 +2,9 @@ const pug = require('pug');
 const fs =require('fs')
 let _ = require('lodash');
 const defaultParam = {
-    title: "multiPage-cli",
+    title: "multi-page-cli",
     tag: {
-        meta: [{
-            name: 'webpack-multiPage-cli',
-            content: 'https://github.com/pomelott/webpack4.x_Demo'
-        }],
+        meta: [],
         headLink: [],
         headScript: [],
         bodyLink: [],

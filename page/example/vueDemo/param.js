@@ -2,10 +2,10 @@ module.exports = {
     title: 'Example in Multi-Page',
     tag: {
         meta: [{
-            name: 'webpack-multiPage-cli',
+            name: 'webpack-multi-page-cli',
             content: 'vueDemo'
         }, {
-            name: "webpack-multipage-cli",
+            name: "webpack-multi-page-cli",
             content: 'https://github.com/pomelott/webpack4.x_Demo'
         }],
         headLink: [{

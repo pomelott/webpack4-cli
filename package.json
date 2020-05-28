@@ -1,7 +1,7 @@
 {
-  "name": "webpackdemo",
-  "version": "1.0.0",
-  "description": "基于webpack4.6.0的多页应用配置，包括常见的插件使用与配置。\r 要点都有注释！\r 如有帮助，请赐我一颗小星星。",
+  "name": "webpack-multi-page-cli",
+  "version": "2.0.1",
+  "description": "webpack-cli for multiPage application. if this helped, please give the star.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,8 +14,15 @@
     "minImg": "./node_modules/.bin/gulp minImg",
     "analyze": "npx webpack --profile --json > stats.json && npx webpack-bundle-analyzer stats.json"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "webpack",
+    "multiPage",
+    "cli",
+    "multi-page",
+    "vue",
+    "react"
+  ],
+  "author": "pomelott",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.6",
