@@ -135,7 +135,7 @@ customize env in cli-config.js in rootDir,detail as follows:
     |    |          └———entry.js   
 
 ```
-then the output will changed
+then the output will be changed
 ```
     Root 
     |———dist   // output root
@@ -172,7 +172,7 @@ please give the star to give a lot of support,
 
 ## For Help
 1.  <a href="https://www.cnblogs.com/pomelott/p/9030208.html">the split-chunk-plugin Doc</a>
-2.  <a href="https://www.cnblogs.com/pomelott/p/6974167.html">webpack 1.X help Doc</a>
-3.  <a href="https://www.cnblogs.com/pomelott/p/8977092.html">webpack 4.X help Doc</a>
+2.  <a href="https://www.cnblogs.com/pomelott/p/6974167.html">webpack 1.x help Doc</a>
+3.  <a href="https://www.cnblogs.com/pomelott/p/8977092.html">webpack 4.x help Doc</a>
 
 
