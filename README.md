@@ -1,11 +1,4 @@
 # webpack-multi-page-cli
-webpackMultiPageCli based on webpack@latest. This cli can provide:
-1. More flexible directory structure
-2. More comprehensive build functions
-3. Much Higher scalability
-4. More active and frequent maintenance
-
-If this is useful for you, please give me a star.
 
 ![webpack-versioin](https://img.shields.io/badge/webpack-4.0.0+-green)
 ![node-versioin](https://img.shields.io/badge/node-v10.8.0-green)
@@ -13,6 +6,13 @@ If this is useful for you, please give me a star.
 
 <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
 
+webpackMultiPageCli based on webpack@latest. This cli can provide:
+1. More flexible directory structure
+2. More comprehensive build functions
+3. Much Higher scalability
+4. More active and frequent maintenance
+
+If this is useful for you, please give me a star.
 
 ## Fast Use
 * download the dependences
