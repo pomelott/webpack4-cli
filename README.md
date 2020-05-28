@@ -113,7 +113,7 @@ customize env in cli-config.js in rootDir,detail as follows:
   | build.htmlAssetsAbsolutePath | Boolean\|String | false | control baseDir of html-inlined-assets in build mode |
 
 ## Tips
-1. ### you can customize your html dir in pageDir, and the output path will be changed accoridingly. for example:
+1.  you can customize your html dir in pageDir, and the output path will be changed accoridingly. for example:
 ```
     Root 
     └───src
@@ -158,10 +158,10 @@ then the output will be changed
     |    |     |——— ...   // css dir is the same as js
     |    |    ...  
 ```
-### 2. the path: src/assets is used to store documents such as documents that do not need to be packaged。
-### 3. you can choose the image-minify plugin in gulpfile. usually the default is OK.
-### 4. you can customize you postcss.config.js, now, autoprefixer has benn used.
-### 5. notice you env version, ![webpack-versioin](https://img.shields.io/badge/webpack-4.0.0+-green) ![node-versioin](https://img.shields.io/badge/node-v10.8.0-green) ![npm-versioin](https://img.shields.io/badge/npm-v6.2.0-green) will be fine.
+2. the path: src/assets is used to store documents such as documents that do not need to be packaged。
+3. you can choose the image-minify plugin in gulpfile. usually the default is OK.
+4. you can customize you postcss.config.js, now, autoprefixer has benn used.
+5. notice you env version, ![webpack-versioin](https://img.shields.io/badge/webpack-4.0.0+-green) ![node-versioin](https://img.shields.io/badge/node-v10.8.0-green) ![npm-versioin](https://img.shields.io/badge/npm-v6.2.0-green) will be fine.
 
 ## Core plugin
 please give the star to give a lot of support, 
