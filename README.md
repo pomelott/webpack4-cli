@@ -11,6 +11,7 @@
 2. More comprehensive build functions
 3. Much Higher scalability
 4. More active and frequent maintenance
+5. Possible to use only ES6 or TS, or both
 
 ### If this is useful for you, please give me a star.
 
