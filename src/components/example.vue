@@ -15,14 +15,17 @@
         <a href="https://router.vuejs.org/zh/">Vue-Router-Document</a>
         <a href="https://github.com/pomelott">Contact</a>
     </div>
+    <fork></fork>
   </div>
 </template>
 <script>
 import logo from './base/logo';
+import fork from './base/fork'
 export default {
     name: 'example',
     components: {
-      logo
+      logo,
+      fork
     },
     data () {
       return {

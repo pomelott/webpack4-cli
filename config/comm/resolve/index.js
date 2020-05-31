@@ -8,8 +8,9 @@ module.exports= {
         'less': dirs.lessDir,
         'assets': dirs.assetsDir,
         'images': dirs.imgDir,
+        'ts': dirs.tsDir,
         'vue': 'vue/dist/vue.esm.js'
     },
-    extensions: ['.ts', '.js', '.vue'],
+    extensions: ['.ts', '.tsx', '.js', '.vue', '.json'],
     mainFiles: ["index"]
 }

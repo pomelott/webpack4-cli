@@ -1,2 +1,1 @@
-react
-ts
+This file will be outputed as is.

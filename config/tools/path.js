@@ -3,6 +3,7 @@ module.exports.rootDir = path.resolve(__dirname, '../../');
 module.exports.distDir = path.resolve(this.rootDir, 'dist');
 module.exports.srcDir  = path.resolve(this.rootDir, 'src');
 module.exports.jsDir  = path.resolve(this.srcDir, 'js');
+module.exports.tsDir  = path.resolve(this.srcDir, 'ts');
 module.exports.componentsDir  = path.resolve(this.srcDir, 'components');
 module.exports.sassDir  = path.resolve(this.srcDir, 'sass');
 module.exports.lessDir  = path.resolve(this.srcDir, 'less');

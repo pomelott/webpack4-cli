@@ -10,5 +10,9 @@
 			}
 		]
 	],
-	"plugins": ["@babel/plugin-transform-runtime"]
+	"plugins": [
+		["@babel/plugin-transform-runtime"],
+		["@babel/proposal-decorators", { "legacy": true }],
+    	["@babel/proposal-class-properties", { "loose": true }]
+	]
 }
