@@ -13,8 +13,8 @@
 <script lang="ts">
 import Vue from 'vue'
 // import Component from 'vue-class-component'
+import {Component, Prop} from 'vue-property-decorator';
 
-import {Component, Prop} from 'vue-property-decorator'
 @Component({})
 export default class Pop extends Vue {
 
@@ -35,16 +35,14 @@ export default class Pop extends Vue {
 
     // computed
     get finalTitle () {
-    return this.title + ' and TS.'
+        return this.title + ' and TS.'
     }
 
     // method
     public async pop():Promise<void> {
-        console.log('pop')
         this.showFlag = 'flex';
         await this.$nextTick();
         this.showPopClass = 'animate__animated animate__bounceInUp'
-    // alert('greeting: ' + this.msg)
     }
 
     closePop () {
