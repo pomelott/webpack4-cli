@@ -37,6 +37,7 @@ for (let key in pages) {
 				title: moduleItem.name,
 				// minify: false,
 				// inject: 'head',
+				cache: false,
 				template: path.join(rootDir, key, moduleItem.html)
 			})
 		)
@@ -52,6 +53,7 @@ for (let key in pages) {
 				filename: `${key}.html`,
 				// minify: false,
 				// inject: 'head',
+				cache: false,
 				title: moduleItem.name,
 				template: tplHtmlDir
 			})

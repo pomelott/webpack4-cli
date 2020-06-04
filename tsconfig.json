@@ -10,7 +10,8 @@
       "moduleResolution": "node",
       "sourceMap": true,
       "experimentalDecorators": true,
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
+      "noErrorTruncation": true
     }
     
   }

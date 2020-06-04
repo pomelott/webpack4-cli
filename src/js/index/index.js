@@ -1,8 +1,8 @@
 
 import "sass/index.scss";
 import Vue from 'vue';
-import logo from 'components/base/logo';
-import fork from 'components/base/fork';
+import logo from 'components/vue/base/logo';
+import fork from 'components/vue/base/fork';
 new Vue({
     el: "#app",
     components: {

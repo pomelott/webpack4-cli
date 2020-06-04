@@ -11,6 +11,6 @@ module.exports= {
         'ts': dirs.tsDir,
         'vue': 'vue/dist/vue.esm.js'
     },
-    extensions: ['.ts', '.tsx', '.js', '.vue', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue', '.json'],
     mainFiles: ["index"]
 }

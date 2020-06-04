@@ -2,13 +2,14 @@
   <div class="ts-vue-demo tc">
       <logo :img="img.ts"></logo>
       <div class="ts-vue-title mt20">
-          Typescript In Vue
+          Vue With Typescript
       </div>
       <div class="ts-vue-subtitle">
           you can use ts in .vue and .ts files.
       </div>
       <div class="ts-vue-link mt40">
-        <span class="show-pop" @click="showPop">show Pop</span>
+        <span class="show-pop" @click="showPop">Show Pop</span>
+        <a href="https://github.com/pomelott/webpack-multi-page-cli">CLI-Document</a>
         <a href="https://www.tslang.cn/">Ts-Document</a>
         <a href="https://github.com/pomelott">Contact</a>
     </div>
@@ -19,8 +20,8 @@
 <script lang="ts">
 import Vue from 'vue';
 // should specify the .vue suffix in ts runtime
-import logo from 'components/base/logo.vue';
-import fork from 'components/base/fork.vue';
+import logo from 'components/vue/base/logo.vue';
+import fork from 'components/vue/base/fork.vue';
 import pop from './base/pop.vue';
 
 export default Vue.extend({

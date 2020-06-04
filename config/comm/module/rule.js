@@ -17,7 +17,7 @@ const Rules = [
 		}
 	},
 	{
-		test: /\.js$/,
+		test: /\.jsx?$/,
 		use: [
 			"babel-loader",
 			{
@@ -68,7 +68,7 @@ const Rules = [
 	{
 		test: /\.html$/,
 		// html中的img标签
-		use: ["html-withimg-loader"]
+		loader: "html-loader?minimize=false"
 	},
 	{
 		test: /\.pug$/,

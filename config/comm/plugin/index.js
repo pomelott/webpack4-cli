@@ -1,6 +1,4 @@
 const webpack = require("webpack");
-const path = require('path');
-const glob = require("glob");
 const htmlPlugin = require('./htmlPlugin')
 const {assetsDir, distAssetsDir} = require('../../tools/path')
 //消除冗余的css

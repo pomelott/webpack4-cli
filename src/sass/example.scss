@@ -1,10 +1,11 @@
 @import "./base/base.scss";
 @import "./base/common.scss";
-#app{
+#app, #root{
     position: relative;
     height: 100%;
     width: 100%;
     background: transparent;
+    overflow: hidden;
 }
 #app *{
     background-color: transparent;

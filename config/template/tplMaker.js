@@ -10,7 +10,8 @@ const defaultParam = {
         bodyLink: [],
         bodyScript: []
     },
-    vueInit: {}
+    vueInit: {},
+    reactInit: {}
 }
 module.exports = function (tpl, data, targetPath) {
     let copy = _.cloneDeep(defaultParam);

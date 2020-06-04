@@ -1,2 +1,2 @@
-import 'js/example/index.js';
+import 'js/example/index';
 import 'sass/example.scss';

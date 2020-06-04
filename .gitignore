@@ -12,3 +12,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 stats.json
+yarn-error.log

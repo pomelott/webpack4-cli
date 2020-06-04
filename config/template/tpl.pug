@@ -27,6 +27,12 @@ html(lang="en")
         div(class=selector)
           if vueInit.entrance
             div(is=vueInit.entrance)
+    if reactInit.el
+      - var selector = reactInit.el.match(/(?<=\.|#)(\w+)/)[0]
+      if reactInit.el[0] === '#'
+        div(id=selector)
+      else if reactInit.el[0] === '.'
+        div(class=selector)
       
     +addTag('link', tag.bodyLink)
     +addTag('script', tag.bodyScript)

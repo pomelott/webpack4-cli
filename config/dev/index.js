@@ -34,6 +34,9 @@ module.exports = {
 		openPage: 'page/index.html',
 		inline: true,
 		compress: true,
+		watchOptions: {
+			watch: true
+		}
 	},
 	devtool: "inline-source-map",  // 开启调试模式
 }
