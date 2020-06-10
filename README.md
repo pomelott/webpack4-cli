@@ -8,7 +8,7 @@
 
 ### webpackMultiPageCli 基于webpack@4，此cli可提供:
 
-1. 更加灵活的、切近实际工作流的目录结构.
+1. 更加灵活的、切近实际工作流的目录结构, 既可单页也可多页.
 2. 更全面的构建功能（runtime-chunk、postcss、sass、less、gulp图片压缩、bundle分析、TS、vue-ts、react等）.
 3. 更高的扩展性，构建目标html快速定义、重写机制、cdnURL定制等.
 4. 更活跃、稳定的更新等.
