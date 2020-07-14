@@ -9,7 +9,7 @@ RUN chmod +x /home/init.sh && \
     nvm install 10.12.0 && \
     nvm use 10.12.0 && \
     npm install -g nrm yarn && \
-    nrm use taobao
+    nrm use taobao && \
     cd /home && \
     git clone https://github.com/pomelott/webpack-multipage-cli.git && \
     cd webpack-multipage-cli && \
