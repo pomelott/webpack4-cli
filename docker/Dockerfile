@@ -6,8 +6,8 @@ RUN chmod +x /home/init.sh && \
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash && \
     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" && \
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
-    nvm install 10.8.0 && \
-    nvm use 10.8.0 && \
+    nvm install 10.13.0 && \
+    nvm use 10.13.0 && \
     npm install -g nrm yarn && \
     nrm use taobao && \
     cd /home && \
