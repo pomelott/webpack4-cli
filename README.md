@@ -6,7 +6,7 @@
 
 <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
 
-### webpackMultiPageCli 基于webpack@4，此cli可提供:
+### webpackMultipageCli 基于webpack@4，此cli可提供:
 
 1. 更加灵活的、切近实际工作流的目录结构, 既可单页也可多页.
 2. 更全面的构建功能（runtime-chunk、postcss、sass、less、gulp图片压缩、bundle分析、TS、vue-ts、react等）.
@@ -50,7 +50,7 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
 * param.js 中的配置项如下，你也可以通过快速查看demo中的代码例子 来快速上手：
   | Name | Type | Default | Description |
   |:---:|:---:|:---:|:---:|
-  | title | String | 'multi-page-cli' | 标题内容 |
+  | title | String | 'multipage-cli' | 标题内容 |
   | tag | Object | {meta: [],eadLink: [],headScript: [],bodyLink: [],bodyScript: []} | 控制插入在html中的资源标签 |
   | tag.meta | Array | [] | control meta tag |
   | tag.headLink | Array | [ ] | control link tag in head section |
@@ -65,13 +65,13 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
 ```js
     // for detai code, you can view vueDemo in dev mode
     module.exports = {
-        title: 'Example in Multi-Page',
+        title: 'Example in multipage',
         tag: {
             meta: [{
-                name: 'webpack-multi-page-cli',
+                name: 'webpack-multipage-cli',
                 content: 'vueDemo'
             }, {
-                name: "webpack-multi-page-cli",
+                name: "webpack-multipage-cli",
                 content: 'https://github.com/pomelott/webpack4.x_Demo'
             }],
             headLink: [{
@@ -94,9 +94,9 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
     <html lang="en">
 
     <head>
-        <title>Example in Multi-Page</title>
-        <meta name="webpack-multi-page-cli" content="vueDemo" />
-        <meta name="webpack-multi-page-cli" content="https://github.com/pomelott/webpack4.x_Demo" />
+        <title>Example in Multipage</title>
+        <meta name="webpack-multipage-cli" content="vueDemo" />
+        <meta name="webpack-multipage-cli" content="https://github.com/pomelott/webpack4.x_Demo" />
         <link rel="icon" type="image/png" href="https://vuejs.bootcss.com/images/logo.png" />
         <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="http://www.cdn-plugin.com/assets/css/entry/example/vueDemo.css?v=2466d76ff005024cce26">

@@ -9,7 +9,7 @@
       </div>
       <div class="ts-vue-link mt40">
         <span class="show-pop" @click="showPop">Show Pop</span>
-        <a href="https://github.com/pomelott/webpack-multi-page-cli">CLI-Document</a>
+        <a href="https://github.com/pomelott/webpack-multipage-cli">CLI-Document</a>
         <a href="https://www.tslang.cn/">Ts-Document</a>
         <a href="https://github.com/pomelott">Contact</a>
     </div>

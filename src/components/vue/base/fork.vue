@@ -1,5 +1,5 @@
 <template>
-  <a class="fork" href="https://github.com/pomelott/webpack-multi-page-cli">
+  <a class="fork" href="https://github.com/pomelott/webpack-multipage-cli">
       <img :src="fork" alt="">
   </a>
 </template>

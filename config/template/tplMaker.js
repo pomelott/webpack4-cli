@@ -2,7 +2,7 @@ const pug = require('pug');
 const fs =require('fs')
 let _ = require('lodash');
 const defaultParam = {
-    title: "multi-page-cli",
+    title: "multipage-cli",
     tag: {
         meta: [],
         headLink: [],

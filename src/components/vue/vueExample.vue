@@ -10,7 +10,7 @@
       so the whole tools of vue-chain such as vue/vuex/vue-router can use here.
     </p>
     <div class="vue-link mt40">
-        <a href="https://github.com/pomelott/webpack-multi-page-cli">CLI-Document</a>
+        <a href="https://github.com/pomelott/webpack-multipage-cli">CLI-Document</a>
         <a href="https://cn.vuejs.org/v2/guide//">Vue-Document</a>
         <a href="https://vuex.vuejs.org/zh/">Vuex-Document</a>
         <a href="https://router.vuejs.org/zh/">Vue-Router-Document</a>

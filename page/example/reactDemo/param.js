@@ -2,10 +2,10 @@ module.exports = {
     title: 'react-demo',
     tag: {
         meta: [{
-            name: 'webpack-multi-page-cli',
+            name: 'webpack-multipage-cli',
             content: 'tsVueDemo'
         }, {
-            name: "webpack-multi-page-cli",
+            name: "webpack-multipage-cli",
             content: 'https://github.com/pomelott/webpack4.x_Demo'
         }],
         headLink: [{

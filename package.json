@@ -1,5 +1,5 @@
 {
-  "name": "webpack-multi-page-cli",
+  "name": "webpack-multipage-cli",
   "version": "2.1.0",
   "description": "webpack-cli for multiPage application. if this helped, please give the star.",
   "main": "index.js",

@@ -22,15 +22,13 @@ function getAllFile (dir) {
 
 function getPageModule (dir) {
     let pages = getAllFile(dir);
-    let pageModule = {}
+    let pageModule = {};
     pages.forEach((item) => {
-        let pathValue = item.match(/page.*/)[0],
+        let pathValue = item.match(/(?<=\/)page.*/)[0],
             pageArr = pathValue.match(/((?:[^\/]*?\/*)+)\/([^\/]+)/),
             pageIdx = pageArr[1],
             pageFile = pageArr[2],
             pageName = pageIdx.split('/').pop();
-            
-            // logger.log(pageArr);
         if (pageIdx === 'page') {
             logger.error(`page module error in ${pageArr[0]}`);
         }
