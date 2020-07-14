@@ -5480,8 +5480,8 @@ html-entities@^1.3.1:
   resolved "https://registry.npmjs.org/html-entities/-/html-entities-1.3.1.tgz#fb9a1a4b5b14c5daba82d3e34c6ae4fe701a0e44"
   integrity sha512-rhE/4Z3hIhzHAUKbW8jVcCyuT5oJCXXqhN/6mXXVCpzTmvJnoH2HL/bt3EZ6p55jbFJBeAe1ZNpL5BugLujxNA==
 
-html-inline-entry-chunk-plugin@1.0.2:
-  version "1.0.2"
+html-inline-entry-chunk-plugin@^1.0.3:
+  version "1.0.3"
   resolved "https://registry.npmjs.org/html-inline-entry-chunk-plugin/-/html-inline-entry-chunk-plugin-1.0.2.tgz#8bc7a93fafd8db05b57143f7e82905d88e15ba7d"
   integrity sha512-hExpNJBKHrkXFxRSkhb/I97ifUViok5fR2bZSWZ0GTo9JR/fKrn2ORKwDPl5mU9r9V+35fXb0fXC6BDiT0dVUA==
   dependencies:

@@ -54,7 +54,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-smushit": "^1.2.0",
     "gulp-tinypng-nokey": "^1.1.0",
-    "html-inline-entry-chunk-plugin": "1.0.2",
+    "html-inline-entry-chunk-plugin": "^1.0.3",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "less": "^3.0.2",
