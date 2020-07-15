@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 COPY init.sh /home/
+COPY .bash_profile /root/
 RUN chmod +x /home/init.sh && \
     apt-get update && \
     apt-get install -y curl git && \
