@@ -1,3 +1,12 @@
-#!/bin/bash
-cd /home
-yarn run dev
+# !/bin/bash
+source ~/.bash_profile
+cd /home/webpack-multipage-cli
+git checkout -- src/** page/** dist/**
+echo "WEBPACK_MODE: $WEBPACK_MODE"
+if [ $WEBPACK_MODE = 'dev' ]; then
+        echo "running in develop mode"
+        npm run dev
+else
+        echo "running in build mode"
+        npm run build
+fi
