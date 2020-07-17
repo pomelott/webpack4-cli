@@ -16,7 +16,7 @@ RUN chmod +x /home/init.sh && \
     nrm use taobao && \
     cd /home && \
     git clone https://github.com/pomelott/webpack-multipage-cli.git && \
-    cd webpack-multipage-cli && \
+    cd /home/webpack-multipage-cli && \
     yarn install
 EXPOSE 9999
 CMD ["/bin/bash", "-c", "/home/init.sh"]
