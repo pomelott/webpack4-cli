@@ -1,5 +1,4 @@
 FROM ubuntu:20.04
-WORKDIR /home/webpack-multipage-cli
 COPY init.sh /home/
 COPY .bash_profile /root/
 COPY cli-config.js /home/webpack-multipage-cli/
@@ -18,5 +17,6 @@ RUN chmod +x /home/init.sh && \
     git clone https://github.com/pomelott/webpack-multipage-cli.git && \
     cd /home/webpack-multipage-cli && \
     yarn install
+WORKDIR /home/webpack-multipage-cli
 EXPOSE 9999
 CMD ["/bin/bash", "-c", "/home/init.sh"]
