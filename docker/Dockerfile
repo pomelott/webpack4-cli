@@ -3,7 +3,7 @@ COPY init.sh /home/
 COPY .bash_profile /root/
 RUN chmod +x /home/init.sh && \
     apt-get update && \
-    apt-get install -y curl git && \
+    apt-get install -y curl git g++ && \
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash && \
     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" && \
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
@@ -14,9 +14,7 @@ RUN chmod +x /home/init.sh && \
     git clone https://github.com/pomelott/webpack-multipage-cli.git && \
     cd /home/webpack-multipage-cli && \
     mkdir dist && \
-    rm -f yarn.lock && \
-    yarn install && \
-    yarn add imagemin-jpegtran imagemin-svgo imagemin-gifsicle imagemin-optipng --dev
+    yarn install
 COPY cli-config.js /home/webpack-multipage-cli/
 COPY output.js /home/webpack-multipage-cli/config/dev/
 EXPOSE 9999
