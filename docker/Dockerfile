@@ -15,7 +15,8 @@ RUN chmod +x /home/init.sh && \
     git clone https://github.com/pomelott/webpack-multipage-cli.git && \
     cd /home/webpack-multipage-cli && \
     mkdir dist && \
-    yarn install
+    yarn install && \
+    yarn install jpegtran-bin
 COPY cli-config.js /home/webpack-multipage-cli/
 COPY output.js /home/webpack-multipage-cli/config/dev/
 EXPOSE 9999
