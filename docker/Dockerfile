@@ -15,7 +15,8 @@ RUN chmod +x /home/init.sh && \
     cd /home/webpack-multipage-cli && \
     mkdir dist && \
     rm -f yarn.lock && \
-    yarn install
+    yarn install && \
+    yarn add imagemin-jpegtran imagemin-svgo imagemin-gifsicle imagemin-optipng --dev
 COPY cli-config.js /home/webpack-multipage-cli/
 COPY output.js /home/webpack-multipage-cli/config/dev/
 EXPOSE 9999
