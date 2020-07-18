@@ -9,6 +9,5 @@ if [ $WEBPACK_MODE = 'dev' ]; then
         npm run dev
 else
         echo "running in build mode"
-	npm rebuild jpegtran-bin
         npm run build
 fi

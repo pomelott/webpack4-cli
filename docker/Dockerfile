@@ -10,13 +10,11 @@ RUN chmod +x /home/init.sh && \
     nvm install 10.13.0 && \
     nvm use 10.13.0 && \
     npm install -g nrm yarn && \
-    nrm use taobao && \
     cd /home && \
     git clone https://github.com/pomelott/webpack-multipage-cli.git && \
     cd /home/webpack-multipage-cli && \
     mkdir dist && \
-    yarn install && \
-    yarn add jpegtran-bin
+    yarn install
 COPY cli-config.js /home/webpack-multipage-cli/
 COPY output.js /home/webpack-multipage-cli/config/dev/
 EXPOSE 9999
