@@ -14,6 +14,7 @@ RUN chmod +x /home/init.sh && \
     cd /home && \
     git clone https://github.com/pomelott/webpack-multipage-cli.git && \
     cd /home/webpack-multipage-cli && \
+    mkdir dist && \
     yarn install
 COPY cli-config.js /home/webpack-multipage-cli/
 COPY output.js /home/webpack-multipage-cli/config/dev/

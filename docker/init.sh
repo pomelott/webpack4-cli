@@ -3,12 +3,12 @@ source ~/.bash_profile
 cd /home/webpack-multipage-cli
 git checkout -- src/**
 git checkout -- page/**
-git checkout -- dist/**
 echo "WEBPACK_MODE: $WEBPACK_MODE"
 if [ $WEBPACK_MODE = 'dev' ]; then
         echo "running in develop mode"
         npm run dev
 else
         echo "running in build mode"
+	npm rebuild jpegtran-bin
         npm run build
 fi
