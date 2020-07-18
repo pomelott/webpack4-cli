@@ -13,7 +13,7 @@
 3. 更高的扩展性，构建目标html快速定义、重写机制、cdnURL定制等.
 4. 更活跃、稳定的更新等.
 5. 基于实际工作流（不拿实际需求Coding都是耍流氓）
-6. 提供 Docker Image供快速构建
+6. 提供 Docker Image 供快速构建
 
 ### 如果此cli帮助到您，欢迎给星，您的星星是我持续更新的动力！
 ## 快速构建
@@ -31,7 +31,22 @@
 ```
 在宿主机浏览器访问 `localhost:8090/page/index.html` 即可。
 ### 启动编译环境
-
+1. 启动容器在后台执行
+```
+    docker run -itd pomelott/webpack-cli /bin/bash
+```
+2. 查看容器id
+```
+    docker ps
+```
+3. 执行构建
+```
+    docker exec -it -w /home/webpack-multipage-cli b7c2b83ed900 /bin/bash
+```
+4. 导出build后文件
+```
+    docker cp b7c2b83ed900:/home/webpack-multipage-cli/dist ./
+```
 ## 快速使用
 * 下载依赖（建议yarn）
 ```base
