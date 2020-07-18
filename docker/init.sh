@@ -1,7 +1,9 @@
 # !/bin/bash
 source ~/.bash_profile
 cd /home/webpack-multipage-cli
-git checkout -- src/** page/** dist/**
+git checkout -- src/**
+git checkout -- page/**
+git checkout -- dist/**
 echo "WEBPACK_MODE: $WEBPACK_MODE"
 if [ $WEBPACK_MODE = 'dev' ]; then
         echo "running in develop mode"
