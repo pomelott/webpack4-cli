@@ -3,7 +3,7 @@ COPY init.sh /home/
 COPY .bash_profile /root/
 RUN chmod +x /home/init.sh && \
     apt-get update && \
-    apt-get install -y curl git build-essential nasm && \
+    apt-get install -y curl git build-essential nasm zlib zlib-dev make automake gcc g++ && \
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash && \
     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" && \
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
