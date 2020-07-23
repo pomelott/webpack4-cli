@@ -11,11 +11,11 @@ RUN chmod +x /home/init.sh && \
     nvm use 10.13.0 && \
     npm install -g nrm yarn && \
     cd /home && \
-    git clone https://github.com/pomelott/webpack-multipage-cli.git && \
-    cd /home/webpack-multipage-cli && \
+    git clone https://github.com/pomelott/webpack4-cli.git && \
+    cd /home/webpack4-cli && \
     mkdir dist && \
     yarn install
-COPY cli-config.js /home/webpack-multipage-cli/
-COPY output.js /home/webpack-multipage-cli/config/dev/
+COPY cli-config.js /home/webpack4-cli/
+COPY output.js /home/webpack4-cli/config/dev/
 EXPOSE 9999
 CMD ["/bin/bash", "-c", "/home/init.sh"]

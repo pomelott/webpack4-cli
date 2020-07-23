@@ -1,5 +1,5 @@
 {
-  "name": "webpack-multipage-cli",
+  "name": "webpack4-cli",
   "version": "2.1.0",
   "description": "webpack-cli for multiPage application. if this helped, please give the star.",
   "main": "index.js",
@@ -95,12 +95,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pomelott/webpack4.x_Demo.git"
+    "url": "git+https://github.com/pomelott/webpack4-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/pomelott/webpack4.x_Demo/issues"
+    "url": "https://github.com/pomelott/webpack4-cli/issues"
   },
-  "homepage": "https://github.com/pomelott/webpack4.x_Demo#readme",
+  "homepage": "https://github.com/pomelott/webpack4-cli#readme",
   "browserslist": {
     "production": [
       ">0.2%",

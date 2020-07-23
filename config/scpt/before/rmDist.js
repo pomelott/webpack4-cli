@@ -3,7 +3,7 @@ const {distDir} = require('../../tools/path');
 const {LogLoading} = require('../../tools/logger')
 module.exports = async () => {
     let loading = new LogLoading({
-        prefix: 'webpack-multipage-cli',
+        prefix: 'webpack4-cli',
         txt: 'cleaning build files ...'
     })
     

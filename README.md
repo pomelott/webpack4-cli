@@ -1,4 +1,4 @@
-# webpack-multipage-cli
+# webpack4-cli
 
 ![webpack-versioin](https://img.shields.io/badge/webpack-4.0.0+-green)
 ![node-versioin](https://img.shields.io/badge/node-v10.8.0-green)
@@ -6,7 +6,7 @@
 
 <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
 
-### webpackMultipageCli 基于webpack@4，此cli可提供:
+### webpack4-cli 基于webpack@4，此cli可提供:
 
 1. 更加灵活的、切近实际工作流的目录结构, 既可单页也可多页.
 2. 更全面的构建功能（runtime-chunk、postcss、sass、less、gulp图片压缩、bundle分析、TS、vue-ts、react等）.
@@ -27,13 +27,13 @@
 * /Users/tate/Documents/work/geek/docker/ws/src: 用于存放资源文件，修改文件可验证启动热更新
 * /Users/tate/Documents/work/geek/docker/ws/page: 用于存放html及入口构建相关文件
 ```bash
-    docker run -it -v /Users/tate/Documents/work/geek/docker/ws/src:/home/webpack-multipage-cli/src -v /Users/tate/Documents/work/geek/docker/ws/page:/home/webpack-multipage-cli/page -p 8090:8090 --env WEBPACK_MODE=dev pomelott/webpack-cli
+    docker run -it -v /Users/tate/Documents/work/geek/docker/ws/src:/home/webpack4-cli/src -v /Users/tate/Documents/work/geek/docker/ws/page:/home/webpack4-cli/page -p 8090:8090 --env WEBPACK_MODE=dev pomelott/webpack-cli
 ```
 在宿主机浏览器访问 `localhost:8090/page/index.html` 即可。
 ### 启动编译环境
 1. 启动容器在后台执行
 ```
-    docker run -itd pomelott/webpack-cli /bin/bash
+    docker run -itd pomelott/webpack4-cli /bin/bash
 ```
 2. 查看容器id
 ```
@@ -41,11 +41,11 @@
 ```
 3. 执行构建
 ```
-    docker exec -it -w /home/webpack-multipage-cli b7c2b83ed900 /bin/bash
+    docker exec -it -w /home/webpack4-cli b7c2b83ed900 /bin/bash
 ```
 4. 导出build后文件
 ```
-    docker cp b7c2b83ed900:/home/webpack-multipage-cli/dist ./
+    docker cp b7c2b83ed900:/home/webpack4-cli/dist ./
 ```
 ## 快速使用
 * 下载依赖（建议yarn）
@@ -99,11 +99,11 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
         title: 'Example in multipage',
         tag: {
             meta: [{
-                name: 'webpack-multipage-cli',
+                name: 'pwebpack4-cli',
                 content: 'vueDemo'
             }, {
-                name: "webpack-multipage-cli",
-                content: 'https://github.com/pomelott/webpack4.x_Demo'
+                name: "webpack4-cli",
+                content: 'https://github.com/pomelott/webpack4-cli'
             }],
             headLink: [{
                 rel: "icon",
@@ -126,8 +126,8 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
 
     <head>
         <title>Example in Multipage</title>
-        <meta name="webpack-multipage-cli" content="vueDemo" />
-        <meta name="webpack-multipage-cli" content="https://github.com/pomelott/webpack4.x_Demo" />
+        <meta name="twebpack4-cli" content="vueDemo" />
+        <meta name="webpack4-cli" content="https://github.com/pomelott/webpack4-cli" />
         <link rel="icon" type="image/png" href="https://vuejs.bootcss.com/images/logo.png" />
         <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="http://www.cdn-plugin.com/assets/css/entry/example/vueDemo.css?v=2466d76ff005024cce26">

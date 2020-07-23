@@ -1,6 +1,6 @@
 # !/bin/bash
 source ~/.bash_profile
-cd /home/webpack-multipage-cli
+cd /home/webpack4-cli
 git checkout -- src/**
 git checkout -- page/**
 if [[ $WEBPACK_MODE != '' ]]; then

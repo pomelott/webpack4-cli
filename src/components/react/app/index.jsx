@@ -14,7 +14,7 @@ class App extends React.Component{
                     <img src="https://img.shields.io/badge/prop--types-15.0.0+-green" alt="propTypes-version"/>
                 </div>
                 <div className="links mt20">
-                    <a href="https://github.com/pomelott/webpack-multipage-cli">CLI-Document</a>
+                    <a href="https://github.com/pomelott/webpack4-cli">CLI-Document</a>
                     <a href="https://react.docschina.org/">React-Document</a>
                     <a href="https://github.com/pomelott">Contact</a>
                 </div>
