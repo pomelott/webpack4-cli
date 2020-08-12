@@ -77,6 +77,18 @@ or
     npm run build
 ```
 
+* 压缩图片
+
+```bash
+    npm run min-img
+```
+
+* 输出dll
+
+```bash
+    npm run dll
+```
+
 * bundle分析
 
 ```bash
