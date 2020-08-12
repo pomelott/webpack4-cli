@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "node ./config/scpt/before",
     "build": "webpack --color --progress --mode=production",
-    "postbuild": "node ./config/scpt/after && npx gulp minifyImg",
+    "postbuild": "node ./config/scpt/after",
     "predev": "node ./config/scpt/before",
     "dev": "webpack-dev-server --color --progress --watch --hot-only --mode=development",
     "postdev": "node ./config/scpt/after",
-    "minImg": "./node_modules/.bin/gulp minImg",
-    "analyze": "npx webpack --profile --json > stats.json && npx webpack-bundle-analyzer stats.json"
+    "min-img": "npx gulp minifyImg",
+    "analyze": "npx webpack --profile --json > stats.json && npx webpack-bundle-analyzer stats.json ./dist",
+    "dll": "npx webpack --mode=development --color --config ./config/dll/index.js"
   },
   "keywords": [
     "webpack",

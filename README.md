@@ -40,44 +40,64 @@
     docker ps
 ```
 3. 执行构建
-```
+
+```bash
     docker exec -it -w /home/webpack4-cli b7c2b83ed900 /bin/bash
 ```
-4. 导出build后文件
-```
+
+1. 导出build后文件
+
+```bash
     docker cp b7c2b83ed900:/home/webpack4-cli/dist ./
 ```
+
 ## 快速使用
+
 * 下载依赖（建议yarn）
-```base
+
+```bash
     yarn install
 ```
+
 or
-```base
+
+```bash
     npm install
 ```
+
 * 开发模式
+
 ```bash
     npm run dev
 ```
+
 * 生产模式
+
 ```bash
     npm run build
 ```
+
 * bundle分析
+
 ```bash
     npm run analyze
 ```
+
 ## 在实际工作中使用 & 自定义 HTML
+
 cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个页面就是一个文件夹。
 首先介绍一个html文件夹下可以存放的三个文件：
+
 * entry.js 为本页面的资源入口（无论使用哪种方式定制HTML，此文件都必须存在）
 * param.js 为默认模板传递参数（如果你想快速定制HTML，这是个不错的选择）
 * page.html 用于重写HTML，若此文件存在，cli将会将page.html的优先级提至最高，用以替代默认模板。
 
 你可以通过以下两种方式自定义HTML：
-1. ###  使用param.js 和 entry.js
+
+### 使用param.js 和 entry.js
+
 如果param.js存在，cli则会将param.js中的参数与pug引擎模板结合产出对应HTML，entry.js中引入的资源（js,css）将会被通过标签插入至对应HTML中。
+
 * param.js 中的配置项如下，你也可以通过快速查看demo中的代码例子 来快速上手：
   | Name | Type | Default | Description |
   |:---:|:---:|:---:|:---:|
@@ -93,6 +113,7 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
   | vueInit.entrance | String | undefined  | vue根实例的入口组件，可详见vue-demo |
   | reactInit | Object | {} | 初始化react根节点 |
   | reactInit.el | String | undefined | react根实例的el值，如”#root“ 可详见react-demo |
+
 ```js
     // for detai code, you can view vueDemo in dev mode
     module.exports = {
@@ -120,6 +141,7 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
         }
     }
 ```
+
 ```html
     <!doctype html>
     <html lang="en">
@@ -144,11 +166,13 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
 
     </html>
 ```
-2. ###  使用 page.html 和 entry.js
+
+### 使用 page.html 和 entry.js
+
 使用page.html 意味着，完全的定制化，你需要完全重写HTML
 
-
 ## 在实际工作中使用 & 自定义env
+
 在根路径的 cli-config.js 文件中自定义env,详细选项如下:
   | Name | Type | Default | Description |
   |:---:|:---:|:---:|:---:|
@@ -158,9 +182,11 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
   | build.htmlAssetsAbsolutePath | Boolean\|String | false | 控制build环境下，编译后HTML中资源标签的根路径，一般以此来修改为服务器资源基础url或cdn-url |
 
 ## 提醒
+
 1. 你可以自定义你的page目录，可根据业务模块嵌套等等。并且输出的html目录也会动态变化。以下有个例子可以帮助您理解，您也可以在cli中尝试
-```
-    Root 
+
+```bash
+    Root
     └───src
     │———node_modules
     |———page   // html dir
@@ -180,8 +206,10 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
     |    |          └———entry.js   
 
 ```
+
 输出路径也会自动变化（包括html和静态资源）
-```
+
+```bash
     Root 
     |———dist   // output root
     |    |——— js
@@ -203,6 +231,7 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
     |    |     |——— ...   // css dir is the same as js
     |    |    ...  
 ```
+
 1. src/assets路径用以存放静态文件，例如txt文档等，此路径下的文件将不会被打包，并会原样输出至dist下。
 2. 你可以在gulpfile下手动选择压缩插件，通常默认选项就可满足需要。
 3. 你可以再 postcss.config.js中自定义, 现在, autoprefixer 已被配置.
@@ -210,15 +239,15 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
 5. 建议使用yarn安装模块包，这将会让你在多人项目中减少因版本不一致带来的问题。
 
 ## 核心插件
-希望在以下插件中得到更多支持，欢迎给星：
-1. <a href="https://github.com/pomelott/html-inline-entry-chunk-plugin">html-inline-entry-chunk-plugin</a>
-2. <a href="https://github.com/jantimon/html-webpack-plugin">html-webpack-plugin</a>
-3. <a href="https://github.com/webpack-contrib/extract-text-webpack-plugin">extract-text-webpack-plugin</a>
 
+希望在以下插件中得到更多支持，欢迎给星：
+
+* [html-inline-entry-chunk-plugin](https://github.com/pomelott/html-inline-entry-chunk-plugin)
+* [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+* [extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin)
 
 ## 友情链接
-1.  <a href="https://www.cnblogs.com/pomelott/p/9030208.html">the split-chunk-plugin Doc</a>
-2.  <a href="https://www.cnblogs.com/pomelott/p/6974167.html">webpack 1.x help Doc</a>
-3.  <a href="https://www.cnblogs.com/pomelott/p/8977092.html">webpack 4.x help Doc</a>
 
-
+* [the split-chunk-plugin Doc](https://www.cnblogs.com/pomelott/p/9030208.htm)
+* [webpack 1.x help Doc](https://www.cnblogs.com/pomelott/p/6974167.html)
+* [webpack 4.x help Doc](https://www.cnblogs.com/pomelott/p/8977092.html)

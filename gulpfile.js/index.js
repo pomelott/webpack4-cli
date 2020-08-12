@@ -14,7 +14,7 @@ logger.info('gulp: starting minify images...')
 // 压缩实在webpack build执行完之后进行的，即便压缩失败也不会影响webpack打包
 task('minifyImg', function () {
     return src('dist/images/**/*.*')
-        // 脚本压缩 gifsicle 等插件很容易下载失败，需要确保插件下载成功 国内最好用cnpm
+        // 脚本压缩 gifsicle 等插件很容易下载失败，需要确保插件下载成功 特别注意【国内最好用cnpm】
         .pipe(
             cache(
                 imagemin([

@@ -13,5 +13,8 @@ module.exports = {
 	module: moduleConfig,
 	resolve: resolveConfig,
 	// context: rootDir,
-	optimization: optimizationConfig
+	optimization: optimizationConfig,
+	performance : {
+		hints : false
+	}
 }
