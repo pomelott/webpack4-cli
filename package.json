@@ -115,5 +115,9 @@
       "last 1 safari version",
       "last 1 ie version"
     ]
+  },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
   }
 }
