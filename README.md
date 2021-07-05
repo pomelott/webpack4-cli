@@ -17,7 +17,7 @@
 
 ### 如果此cli帮助到您，欢迎给星，您的星星是我持续更新的动力！
 ## 快速构建
-* 注：若不使用Docker，可跳过此项，直接进入快速使用。
+* 注：若不使用Docker，可跳过此项，直接进入[快速使用](https://github.com/pomelott/webpack4-cli#%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8)。
 ### 拉取镜像
 ```bash
     docker pull pomelott/webpack-cli
