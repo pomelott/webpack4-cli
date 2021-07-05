@@ -3,6 +3,7 @@ import Logo from '../logo';
 import reactImg from 'images/example/react.jpg';
 import Fork from '../fork';
 import './app.scss';
+import { hot } from 'react-hot-loader';
 class App extends React.Component{
     render () {
         return (
@@ -26,4 +27,4 @@ class App extends React.Component{
     }
 }
 
-export default App;
+export default hot(module)(App);

@@ -19,17 +19,22 @@ const Rules = [
 	{
 		test: /\.jsx?$/,
 		use: [
-			"babel-loader",
+			{
+				loader: "babel-loader",
+				options: {
+					plugins: ['react-hot-loader/babel']
+				}
+			},
 			{
 				loader: 'eslint-loader',
 				options: {
 					fix: true,
-					enforce: "pre"
+					enforce: "pre",
 				}
 			}
 		],
 		// 不检查node_modules下的js文件
-		exclude: "/node_modules/",
+		exclude: "/node_modules/"
 		// 此处指允许使用 ES6与commonJS的模块化规范
 		// parser: {
 		// 	// amd: false, //禁用 AMD
