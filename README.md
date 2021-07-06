@@ -132,7 +132,7 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
         title: 'Example in multipage',
         tag: {
             meta: [{
-                name: 'pwebpack4-cli',
+                name: 'webpack4-cli',
                 content: 'vueDemo'
             }, {
                 name: "webpack4-cli",
@@ -160,7 +160,7 @@ cli将会根据pageDir路径，动态生成webpack entry，在源码中，一个
 
     <head>
         <title>Example in Multipage</title>
-        <meta name="twebpack4-cli" content="vueDemo" />
+        <meta name="webpack4-cli" content="vueDemo" />
         <meta name="webpack4-cli" content="https://github.com/pomelott/webpack4-cli" />
         <link rel="icon" type="image/png" href="https://vuejs.bootcss.com/images/logo.png" />
         <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.min.css" rel="stylesheet" />
