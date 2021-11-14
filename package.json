@@ -60,7 +60,7 @@
     "html-webpack-plugin": "^4.3.0",
     "less": "^3.0.2",
     "less-loader": "^4.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "node-sass": "~4.9.1",
     "pomelo-toolbox": "^1.0.32",
     "postcss-loader": "^2.1.4",
