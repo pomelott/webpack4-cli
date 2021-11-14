@@ -64,7 +64,7 @@
     "node-sass": "~4.9.1",
     "pomelo-toolbox": "^1.0.32",
     "postcss-loader": "^2.1.4",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-html-loader": "^1.1.5",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
